@@ -1,0 +1,125 @@
+Stacks
+1. Operations: isEmpty, delete, add.
+2. How it works: First In Last Out || Last In First Out
+
+Operations of the Stack:
+1. Pop (delete)
+
+	listStart -> n1 -> n2 -> NULL
+
+	1.1. Make the listStart point to the node that is next to first node.
+		listStart = listStart.next
+
+2. Push (add)
+
+	listStart -> n1 -> n2 -> NULL
+
+	2.1. Save a link to the first node in the stack:
+
+		Node oldFirst = listStart;
+		listStart -> n1 -> n2 -> NULL
+			     /
+		         oldFirst
+
+	2.2. Create a new node and at the same time make the listStart point to it:
+
+		listStart = new Node();
+		listStart -> new node    n1 -> n2 -> NULL
+			     		 /
+		         	     oldFirst
+
+	2.3. Initialize and add the new node to the stack:
+
+		listStart.content = "Content";
+		listStart.next = oldFirst;
+		listStart -> new node -> n1 -> n2 -> NULL
+		
+Implementation of the stack using linked list:
+
+public class Stack {
+	private Node first = NULL;
+
+	private class Node {
+		String item;
+		Node next;
+	}
+
+	public boolean isEmplty() {
+		return first == null;
+	}
+
+	public void push(String content) {
+		Node oldFirst = first;
+		first = new Node();
+		first.item = content;
+		first.next = oldFirst;
+	}
+
+	public String pop() {
+		String content = first.item;
+		first = first.next;
+		return content;
+	}
+}
+
+______________________________________________________________________
+
+
+Implementation of the stack using resizing array
+
+public class Stack {
+	private String[] s;
+	private int N = 0;
+
+	public Stack () {
+		s = new String[1];
+	}
+
+	public boolean isEmpty () {
+		return N == 0;
+	}
+
+	public void push (String item) {
+		if (N == s.length) resize(2 * s.length);
+		s[N++] = item;
+	}
+
+	public void resize (int capacity) {
+		String copy = new String [capacity]
+		for (int i = 0; i < N; i++) {
+			copy[i] = s[i];
+		}
+		s = copy;
+	}
+
+	public String pop () {
+		String item == s[--N];
+		s[N] = null;
+		if (N > 0 && N == s.length / 4) resize(s.length / 2);
+		return item;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -16,3 +16,6 @@ Remarkably, it is possible to solve the problem much faster than the brute-force
  	- For each other point q, determine the slope it makes with p.
 	- Sort the points according to the slopes they makes with p.
 	- Check if any 3 (or more) adjacent points in the sorted order have equal slopes with respect to p. If so, these points, together with p, are collinear.
+
+
+### Grade: 94/100

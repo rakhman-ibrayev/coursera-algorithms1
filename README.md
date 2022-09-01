@@ -4,26 +4,26 @@ This course covers the essential information that every serious programmer needs
 
 ### [Topics Covered](https://www.coursera.org/learn/algorithms-part1#syllabus)
 
-    #### Week 1
-        - Union-Find
-        - Analysis of Algorithms
+#### Week 1
+    - Union-Find
+    - Analysis of Algorithms
 
-    #### Week 2
-        - Stacks and Queues
-        - Elementary Sorts
+#### Week 2
+    - Stacks and Queues
+    - Elementary Sorts
 
-    #### Week 3
-        - Mergesort
-        - Quicksort
+#### Week 3
+    - Mergesort
+    - Quicksort
 
-    #### Week 4
-        - Priority Queues
-        - Elementary Symbol Tables
+#### Week 4
+    - Priority Queues
+    - Elementary Symbol Tables
 
-    #### Week 5
-        - Balanced Search Trees
-        - Geometric Applications of BSTs
+#### Week 5
+    - Balanced Search Trees
+    - Geometric Applications of BSTs
 
-    #### Week 6
-        - Hash Tables
-        - Symbol Table Applications
+#### Week 6
+    - Hash Tables
+    - Symbol Table Applications

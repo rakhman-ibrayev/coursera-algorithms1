@@ -31,4 +31,6 @@ public class SelectionSort {
 
 Algorithm performance:
 Quadratic O(n^2) time.
-		
+Constant O(1) space (sorting in place).
+
+Stability: not stable

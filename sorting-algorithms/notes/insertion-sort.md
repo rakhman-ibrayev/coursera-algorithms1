@@ -11,16 +11,12 @@ public class InsertionSort {
         for (int i = 0; i < a.length - 1; i++) {
             for (int j = i + 1; j > 0; j--) {
                 if (a[j] < a[j - 1]) {
-                    exch(a, a[i], a[j - 1]);
+                    exch(a, j, j - 1);
                 } else {
                     break;
                 }
             }
         }
-    }
-
-    public static boolean less (Comparable v, Comparable w) {
-        return v.compareTo(w) < 0;
     }
 
     public static void exch (Comparable[] a, int i, int j) {

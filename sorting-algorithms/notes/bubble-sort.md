@@ -1,19 +1,20 @@
-## Insertion sort
+## Bubble sort
 
 ### General logic
-Iterate through the input array -> check if the current element is less than the previous one -> if yes, sort the subarray [0...current element index], if not, keep iterating -> repeat the above steps.
+
+Swap the adjacent elements if they are in the wrong order.
 
 ### Implementation
 
 ```java
-public class InsertionSort {
+public class BubbleSort {
     public static void sort (Comparable[] a) {
-        for (int i = 0; i < a.length - 1; i++) {
-            for (int j = i + 1; j > 0; j--) {
-                if (less(a[j], a[j - 1])) {
-                    exch(a, j, j - 1);
-                } else {
-                    break;
+        int N = a.length;
+
+        for (int i = 0; i < N - 1; i++) {
+            for (int j = 0; j < N - 1 - i; j++) {
+                if (less(a[j + 1], a[j])){
+                    exch(a, j, j + 1);
                 }
             }
         }

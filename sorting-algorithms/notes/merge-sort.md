@@ -19,15 +19,16 @@ public class MergeSort {
         int i = low, j = mid + 1;
 
         // merge back to original array a[]
-        // 1) if either pointers go out of bounds for their parts,
-        // get the remaining elements from the other part and put them in the a[]
-        // 2) if the current element at either index is smaller,
-        // put that element in a[] and increment that index
         for (int k = low; k <= high; k++) {
+            // 1) if some pointer goes out of bounds for its part, get the
+            // remaining elements from the other part and put them in a[]
             if (i > mid)
                 a[k] = aux[j++];
             else if (j > high)
                 a[k] = aux[i++];
+
+            // 2) if the current element at either of the indexes is
+            // smaller, put that element in a[] and increment that index
             else if (less(aux[j], aux[i]))
                 a[k] = aux[j++];
             else
@@ -38,8 +39,8 @@ public class MergeSort {
     private static void sort(Comparable[] a, Comparable[] aux, int low, int high) {
         if (low >= high) return;
 
-        // calculate the middle index so that
-        // it is integer-overflow-proof
+        // calculate the middle index in a way
+        // that it is integer-overflow-proof
         int mid = low + (high - low) / 2;
 
         // sort the two parts
